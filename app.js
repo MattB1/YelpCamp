@@ -11,6 +11,13 @@ var User = require("./models/user");
 var methodOverride = require("method-override");
 var flash = require("connect-flash");
 
+
+// set port for local and deployment
+var port = process.env.PORT;
+if (port == "" || port == null) {
+  port == 3000;
+}
+
 //requring routes
 var commentRoutes = require("./routes/comments"),
   campgroundRoutes = require("./routes/campgrounds"),
@@ -50,7 +57,7 @@ app.use("/", indexRoutes);
 app.use("/campgrounds", campgroundRoutes);
 app.use("/campgrounds/:id/comments", commentRoutes);
 
-app.listen(3000, function () {
+app.listen(port, function () {
   console.log("the server has started...")
 })
 
