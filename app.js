@@ -11,6 +11,7 @@ var User = require("./models/user");
 var methodOverride = require("method-override");
 var flash = require("connect-flash");
 var port = process.env.PORT || 3000;
+console.log(port);
 
 
 //requring routes
