@@ -19,9 +19,9 @@ var commentRoutes = require("./routes/comments"),
   indexRoutes = require("./routes/index")
 
 console.log(process.env.DATABASEURL);
-mongoose.connect(process.env.DATABASEURL, { useNewUrlParser: true });
+//mongoose.connect(process.env.DATABASEURL, { useNewUrlParser: true });
 // mongodb://matt:luna12@ds149034.mlab.com:49034/yelpcampcolt
-//mongoose.connect("mongodb://matt:luna12@ds149034.mlab.com:49034/yelpcampcolt", { useNewUrlParser: true });
+mongoose.connect("mongodb://matt:luna12@ds149034.mlab.com:49034/yelpcampcolt", { useNewUrlParser: true });
 
 
 app.use(bodyParser.urlencoded({ extended: true }));
