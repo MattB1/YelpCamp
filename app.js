@@ -10,22 +10,20 @@ var LocalStrategy = require("passport-local");
 var User = require("./models/user");
 var methodOverride = require("method-override");
 var flash = require("connect-flash");
+var port;
 
-
-// set port for local and deployment
-var port = process.env.PORT;
-if (port == "" || port == null) {
-  port == 3000;
-}
 
 //requring routes
 var commentRoutes = require("./routes/comments"),
   campgroundRoutes = require("./routes/campgrounds"),
   indexRoutes = require("./routes/index")
 
-// mongoose.connect("mongodb://localhost:27017/yelp_camp", { useNewUrlParser: true });
+console.log(process.env.DATABASEURL);
+mongoose.connect(process.env.DATABASEURL, { useNewUrlParser: true });
 // mongodb://matt:luna12@ds149034.mlab.com:49034/yelpcampcolt
-mongoose.connect("mongodb://matt:luna12@ds149034.mlab.com:49034/yelpcampcolt", { useNewUrlParser: true });
+//mongoose.connect("mongodb://matt:luna12@ds149034.mlab.com:49034/yelpcampcolt", { useNewUrlParser: true });
+
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
@@ -57,7 +55,8 @@ app.use("/", indexRoutes);
 app.use("/campgrounds", campgroundRoutes);
 app.use("/campgrounds/:id/comments", commentRoutes);
 
-app.listen(port, function () {
-  console.log("the server has started...")
+app.listen(process.env.PORT, function () {
+  console.log("the server has started....");
 })
+
 
