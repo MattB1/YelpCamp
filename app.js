@@ -10,7 +10,7 @@ var LocalStrategy = require("passport-local");
 var User = require("./models/user");
 var methodOverride = require("method-override");
 var flash = require("connect-flash");
-var port;
+var port = process.env.PORT || 3000;
 
 
 //requring routes
@@ -55,7 +55,7 @@ app.use("/", indexRoutes);
 app.use("/campgrounds", campgroundRoutes);
 app.use("/campgrounds/:id/comments", commentRoutes);
 
-app.listen(process.env.PORT, function () {
+app.listen(port, function () {
   console.log("the server has started....");
 })
 
