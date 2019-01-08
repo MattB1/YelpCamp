@@ -1,7 +1,5 @@
 # YelpCamp
 
-[![Known Vulnerabilities](https://snyk.io/test/github/lucasweng/yelp-camp/badge.svg)](https://snyk.io/test/github/lucasweng/yelp-camp)
-[![NSP Status](https://nodesecurity.io/orgs/webdevprojects/projects/e3247e54-2256-44ff-9c8a-e4e087bd49fa/badge)](https://nodesecurity.io/orgs/webdevprojects/projects/e3247e54-2256-44ff-9c8a-e4e087bd49fa)
 
 > A Node.js web application project from the Udemy course - [The Web Developer Bootcamp by Colt Steele](https://www.udemy.com/the-web-developer-bootcamp/)
 
@@ -30,14 +28,10 @@
   * Create, edit and delete posts and comments
 
   * Upload campground photos
-
-  * Display campground location on Google Maps
   
   * Search existing campgrounds
 
 * Manage user account with basic functionalities:
-
-  * ~~Password reset via email confirmation~~ (disabled)
 
   * Profile page setup with sign-up
 
@@ -50,8 +44,6 @@
 * Update campground photos when editing campgrounds
 
 * Update personal information on profile page
-
-* Improve image load time on the landing page using Cloudinary
 
 * Use Helmet to strengthen security
  
@@ -95,16 +87,12 @@ Some comments in the source code are course notes and therefore might not seem n
 * [mongoose](http://mongoosejs.com/)
 * [async](http://caolan.github.io/async/)
 * [passport](http://www.passportjs.org/)
-* [passport-local](https://github.com/jaredhanson/passport-local#passport-local)
 * [express-session](https://github.com/expressjs/session#express-session)
 * [method-override](https://github.com/expressjs/method-override#method-override)
-* [moment](https://momentjs.com/)
-* [connect-flash](https://github.com/jaredhanson/connect-flash#connect-flash)
 
 ### Platforms
 
 * [Heroku](https://www.heroku.com/)
-* [Cloud9](https://aws.amazon.com/cloud9/?origin=c9io)
 ## License
 
 #### [MIT](./LICENSE)
